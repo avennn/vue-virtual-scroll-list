@@ -820,10 +820,9 @@
         var offset = this.getOffset();
         var clientSize = this.getClientSize();
         var scrollSize = this.getScrollSize(); // iOS scroll-spring-back behavior will make direction mistake
-
-        if (offset < 0 || offset + clientSize > scrollSize + 1 || !scrollSize) {
-          return;
-        }
+        //   if (offset < 0 || (offset + clientSize > scrollSize + 1) || !scrollSize) {
+        //     return
+        //   }
 
         this.virtual.handleScroll(offset);
         this.emitEvent(offset, clientSize, scrollSize, evt);
